@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    height: 60px;
+}
+
+header > h1 {
+    display: inline-flex;
+    justify-content: center;
+}
+
+
+header > nav > ul {
+    display: inline-flex;
+    list-style-type: none;
+    
+}
+
+header > nav > ul > li {
+    margin-right: 20px;
+}
+
+.decoration_none {
+    display: inline-flex;
+    text-decoration: none;
+    color: inherit;
+    list-style-type: none;
+}
+
+div > h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+div > form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+div > form > input {
+    width: 25%;
+    height: 30px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+div > form > button {
+    width: 70px;
+    height: 30px;
+    border-radius: 0px 20px 20px 0px;
+    background-color: white;
+    padding-right: 10px;
+}
+
+input::placeholder {
+    padding-left: 10px;
+}
+
+div .Rand{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 120px;
+    left: 50%;
+}
+
+.Rand > button {
+    width: 30%;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: white;
+    margin-top: 20px;
+}
