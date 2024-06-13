@@ -1,8 +1,7 @@
-// src/components/RecipeCard.jsx
 import React, { useState } from 'react';
 import RecipeModal from './RecipeModal';
 
-const RecipeCard = ({ recipe }) => {
+const RecipeCard = ({ recipe, showArrows, prevRecipe, nextRecipe }) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleTmiClick = () => {
@@ -15,10 +14,14 @@ const RecipeCard = ({ recipe }) => {
 
   return (
     <div className="recipe-card">
+      {showArrows && <div className='arrow-left' onClick={prevRecipe}></div>}
       <img src={recipe.image} alt={recipe.title} />
       <h3>{recipe.title}</h3>
-      <button onClick={handleTmiClick}>TMI</button>
-      <a href={recipe.sourceUrl} target="_blank" rel="noopener noreferrer">View Recipe</a>
+      <div>
+        <button onClick={handleTmiClick}>TMI</button>
+        <a href={recipe.sourceUrl} target="_blank" rel="noopener noreferrer" className='View_Recipt'>View Recipe</a>
+      </div>
+      {showArrows && <div className='arrow-right' onClick={nextRecipe}></div>}
       {showModal && <RecipeModal recipe={recipe} onClose={handleCloseModal} />}
     </div>
   );

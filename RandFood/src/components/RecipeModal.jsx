@@ -1,4 +1,3 @@
-// src/components/RecipeModal.jsx
 import React from 'react';
 import './RecipeModal.css';
 
@@ -8,7 +7,7 @@ const RecipeModal = ({ recipe, onClose }) => {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="close-button" onClick={onClose}>Close</button>
+        <button className="close-button" onClick={onClose}>X</button>
         <h2>{recipe.title}</h2>
         <img src={recipe.image} alt={recipe.title} />
         <p>{recipe.summary.replace(/<\/?[^>]+(>|$)/g, "")}</p>

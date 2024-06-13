@@ -18,10 +18,10 @@ const RandomPage = () => {
     }
   };
 
-  return (
+  return (  
     <div className='Rand'>
       <h2>Random Recipe</h2>
-        <button onClick={getRandomRecipe}>Get Random Recipe</button>
+        <button onClick={getRandomRecipe} className='GetRand'>Get Random Recipe</button>
       {randomRecipe && <RecipeCard recipe={randomRecipe} />}
     </div>
   );
